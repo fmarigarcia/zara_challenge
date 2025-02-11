@@ -1,0 +1,51 @@
+.card {
+  width: 344px;
+  height: 344px;
+  padding: 16px;
+  outline: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.imgContainer {
+  height: 100%;
+  position: relative;
+}
+
+.image {
+  object-fit: scale-down;
+}
+
+.data {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.phoneName {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-transform: uppercase;
+}
+
+.brand {
+  color: #79736d;
+  font-size: 10px;
+  line-height: 12px;
+  text-align-last: left;
+}
+
+.text12 {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.price {
+  font-size: 12px;
+  line-height: 14px;
+  text-align: right;
+  height: fit-content;
+}

@@ -12,7 +12,7 @@ export const testIds = {
   link: 'header-home-link',
 };
 
-describe('FavCounter', () => {
+describe('Header', () => {
   const router: Partial<NextRouter> = {
     push: jest.fn(),
     prefetch: jest.fn(),
@@ -27,9 +27,6 @@ describe('FavCounter', () => {
     const link = screen.getByTestId(testIds.link);
     fireEvent.click(link);
 
-    expect(router.push).toHaveBeenCalledWith(
-      routes.home,
-      expect.objectContaining({})
-    );
+    expect(router.push).toHaveBeenCalledWith(routes.home, expect.objectContaining({}));
   });
 });

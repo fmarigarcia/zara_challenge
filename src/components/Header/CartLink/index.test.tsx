@@ -13,7 +13,7 @@ export const testIds = {
   link: 'cart-link',
 };
 
-describe('FavCounter', () => {
+describe('CartLink', () => {
   const count = 1;
 
   const router: Partial<NextRouter> = {
