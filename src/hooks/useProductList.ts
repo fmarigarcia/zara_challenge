@@ -3,7 +3,6 @@ import PhoneApi from '@/services/PhoneApi.ts';
 import { ListProduct } from '@/types/product';
 
 const useProductList = () => {
-  const phoneApi = PhoneApi();
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [products, setProducts] = useState<ListProduct[]>([]);
@@ -11,6 +10,7 @@ const useProductList = () => {
   useEffect(() => {
     setLoading(true);
     const doQuery = async () => {
+      const phoneApi = PhoneApi();
       const queriedProducts = await phoneApi.getPhones(searchQuery);
       setProducts(queriedProducts);
       setLoading(false);

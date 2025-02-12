@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { Product } from '@/types/product';
 import styles from './styles.module.css';
 
-type SpecificationT = {
+type SpecificationDisplay = {
   name: string;
   data: string;
 };
@@ -13,7 +13,7 @@ interface IProductSpecificationsProps {
 }
 
 const ProductSpecifications: React.FC<IProductSpecificationsProps> = async ({ product }) => {
-  const specificationArray: SpecificationT[] = [
+  const specificationArray: SpecificationDisplay[] = [
     { name: 'brand', data: product.brand },
     { name: 'name', data: product.name },
     { name: 'description', data: product.description },

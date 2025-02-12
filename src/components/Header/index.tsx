@@ -12,7 +12,7 @@ const Header: React.FC = () => {
       <Link href={routes.home} data-testid={testIds.link}>
         <Logo />
       </Link>
-      <CartLink count={0} />
+      <CartLink />
     </div>
   );
 };

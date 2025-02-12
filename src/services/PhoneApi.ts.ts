@@ -1,4 +1,4 @@
-import { ListProduct } from '@/types/product';
+import { ListProduct, Product } from '@/types/product';
 
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 const PHONE_LIST_LIMIT = 20;
@@ -18,8 +18,19 @@ const PhoneApi = () => {
     }).then((res) => res.json());
   };
 
+  const getPhoneById = (phoneId: string): Promise<Product> => {
+    const url = new URL(`https://prueba-tecnica-api-tienda-moviles.onrender.com/products/${phoneId}`);
+    return fetch(url, {
+      headers: {
+        'X-API-KEY': API_KEY ?? '',
+      },
+      cache: 'force-cache',
+    }).then((res) => res.json());
+  };
+
   return {
     getPhones,
+    getPhoneById,
   };
 };
 

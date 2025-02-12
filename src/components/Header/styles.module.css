@@ -2,5 +2,5 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px var(--side-padding);
+  padding: 24px 0;
 }

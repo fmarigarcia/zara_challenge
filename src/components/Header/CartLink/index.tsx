@@ -1,19 +1,18 @@
-import React from 'react';
+'use client';
+
+import React, { useContext } from 'react';
 import Link from 'next/link';
 import { routes } from '@/app/routes';
 import Bag from '@/icons/Bag';
-import { testIds } from './index.test';
+import { CartContext } from '@/services/CartProvider';
 import styles from './styles.module.css';
 
-interface ICartLinkProps {
-  count: number;
-}
-
-const CartLink: React.FC<ICartLinkProps> = ({ count }) => {
+const CartLink: React.FC = () => {
+  const { cartItems } = useContext(CartContext);
   return (
-    <Link href={routes.cart} className={styles.cartLink} data-testid={testIds.link}>
+    <Link href={routes.cart} className={styles.cartLink}>
       <Bag />
-      <span data-testid={testIds.count}>{count}</span>
+      <span>{cartItems.length}</span>
     </Link>
   );
 };
