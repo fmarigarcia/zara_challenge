@@ -21,6 +21,7 @@ const ColorOptions: React.FC<IStorageOptionsProps> = ({ colorOptions, selectedCo
             type="button"
             onClick={() => setSelectedColor(color)}
             style={{ background: color.hexCode }}
+            title={color.name}
           />
         ))}
       </div>

@@ -8,7 +8,7 @@ interface IProductCarouselProps {
   products: ListProduct[];
 }
 
-const ProductCarousel: React.FC<IProductCarouselProps> = async ({ title, products }) => {
+const ProductCarousel: React.FC<IProductCarouselProps> = ({ title, products }) => {
   return (
     <div className={styles.container}>
       <span className={styles.title}>{title}</span>

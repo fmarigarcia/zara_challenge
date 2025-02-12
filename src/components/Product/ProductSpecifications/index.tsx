@@ -12,7 +12,7 @@ interface IProductSpecificationsProps {
   product: Product;
 }
 
-const ProductSpecifications: React.FC<IProductSpecificationsProps> = async ({ product }) => {
+const ProductSpecifications: React.FC<IProductSpecificationsProps> = ({ product }) => {
   const specificationArray: SpecificationDisplay[] = [
     { name: 'brand', data: product.brand },
     { name: 'name', data: product.name },
