@@ -1,6 +1,6 @@
 .card {
-  width: 344px;
-  height: 344px;
+  width: var(--card-size);
+  height: var(--card-size);
   padding: 16px;
   outline: 1px solid black;
   display: flex;

@@ -1,6 +1,22 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --card-size: 344px;
+  --side-padding: 100px;
+}
+
+@media only screen and (max-width: 1024px) {
+  :root {
+    --card-size: 377px;
+    --side-padding: 24px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  :root {
+    --card-size: 361px;
+    --side-padding: 16px;
+  }
 }
 
 html,
