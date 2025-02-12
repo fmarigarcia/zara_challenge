@@ -2,7 +2,12 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['prueba-tecnica-api-tienda-moviles.onrender.com'],
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'prueba-tecnica-api-tienda-moviles.onrender.com',
+      },
+    ],
   },
 };
 

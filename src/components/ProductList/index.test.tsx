@@ -1,8 +1,7 @@
-import { getMockProductArray, mockProduct } from '@/mocks/product';
+import { getMockProductArray } from '@/mocks/product';
 import { render, screen } from '@testing-library/react';
 import React from 'react';
 import ProductList from '.';
-import { testIds } from '../ProductCard/index.test';
 
 describe('Product List', () => {
   const productQuantity = 5;
@@ -11,6 +10,6 @@ describe('Product List', () => {
   test('renders correctly', () => {
     render(<ProductList products={products} />);
 
-    expect(screen.getAllByTestId(testIds.brand)).toHaveLength(productQuantity);
+    expect(screen.getAllByRole('link')).toHaveLength(productQuantity);
   });
 });
