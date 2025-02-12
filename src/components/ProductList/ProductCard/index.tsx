@@ -6,7 +6,11 @@ import { routes } from '@/app/routes';
 import { ListProduct } from '@/types/product';
 import styles from './styles.module.css';
 
-const ProductCard: React.FC<{ product: ListProduct }> = ({ product }) => {
+interface IProductCardProps {
+  product: ListProduct;
+}
+
+const ProductCard: React.FC<IProductCardProps> = ({ product }) => {
   return (
     <Link href={`${routes.product}/${product.id}`}>
       <div className={styles.card}>

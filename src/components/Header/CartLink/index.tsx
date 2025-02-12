@@ -5,7 +5,11 @@ import Bag from '@/icons/Bag';
 import { testIds } from './index.test';
 import styles from './styles.module.css';
 
-const CartLink: React.FC<{ count: number }> = ({ count }) => {
+interface ICartLinkProps {
+  count: number;
+}
+
+const CartLink: React.FC<ICartLinkProps> = ({ count }) => {
   return (
     <Link href={routes.cart} className={styles.cartLink} data-testid={testIds.link}>
       <Bag />
