@@ -1,5 +1,5 @@
-import Close from '@/icons/Close';
 import React, { useCallback } from 'react';
+import Close from '@/icons/Close';
 import styles from './styles.module.css';
 
 interface ISearchBarProps {

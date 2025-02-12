@@ -1,9 +1,9 @@
-import { routes } from '@/app/routes';
-import { mockProduct } from '@/mocks/product';
 import { fireEvent, render, screen } from '@testing-library/react';
+import React from 'react';
 import { RouterContext } from 'next/dist/shared/lib/router-context.shared-runtime';
 import { NextRouter } from 'next/router';
-import React from 'react';
+import { routes } from '@/app/routes';
+import { mockProduct } from '@/mocks/product';
 import ProductCard from '.';
 
 describe('Product', () => {

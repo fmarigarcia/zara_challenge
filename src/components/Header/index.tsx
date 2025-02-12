@@ -1,7 +1,7 @@
+import React from 'react';
+import Link from 'next/link';
 import { routes } from '@/app/routes';
 import Logo from '@/icons/Logo';
-import Link from 'next/link';
-import React from 'react';
 import CartLink from './CartLink';
 import { testIds } from './index.test';
 import styles from './styles.module.css';

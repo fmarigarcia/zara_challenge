@@ -5,7 +5,7 @@ const config = {
   semi: true,
   printWidth: 120,
   singleQuote: true,
-  importOrder: ['<THIRD_PARTY_MODULES>', '^@components/(.*)$', '^[./]'],
+  importOrder: ['react', '<THIRD_PARTY_MODULES>', '^@/(.*)$', '^[./]'],
   importOrderSeparation: false,
   importOrderSortSpecifiers: true,
 };

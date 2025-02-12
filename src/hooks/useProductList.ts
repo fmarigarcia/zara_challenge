@@ -1,6 +1,6 @@
+import { useEffect, useState } from 'react';
 import PhoneApi from '@/services/PhoneApi.ts';
 import { ListProduct } from '@/types/product';
-import { useEffect, useState } from 'react';
 
 const useProductList = () => {
   const phoneApi = PhoneApi();

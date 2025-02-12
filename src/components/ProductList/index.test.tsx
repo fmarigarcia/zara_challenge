@@ -1,6 +1,6 @@
-import { getMockProductArray } from '@/mocks/product';
 import { render, screen } from '@testing-library/react';
 import React from 'react';
+import { getMockProductArray } from '@/mocks/product';
 import ProductList from '.';
 
 describe('Product List', () => {

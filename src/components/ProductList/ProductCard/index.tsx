@@ -1,9 +1,9 @@
-import { routes } from '@/app/routes';
-import { ListProduct } from '@/types/product';
+import React from 'react';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import { routes } from '@/app/routes';
+import { ListProduct } from '@/types/product';
 import styles from './styles.module.css';
 
 const ProductCard: React.FC<{ product: ListProduct }> = ({ product }) => {

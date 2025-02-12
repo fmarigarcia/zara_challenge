@@ -1,9 +1,9 @@
+import reactPlugin from 'eslint-plugin-react';
 import { FlatCompat } from '@eslint/eslintrc';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import eslintPluginPrettier from 'eslint-plugin-prettier';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
-import reactPlugin from 'eslint-plugin-react';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -32,7 +32,10 @@ const eslintConfig = [
       ...tsPlugin.configs?.rules,
       ...reactPlugin.configs?.rules,
       ...eslintPluginPrettier.configs?.rules,
-      'prettier/prettier': ['error', { endOfLine: 'auto' }],
+      'prettier/prettier': [
+        'error',
+        { endOfLine: 'auto', importOrder: ['react', '<THIRD_PARTY_MODULES>', '^@/(.*)$', '^[./]'] },
+      ],
     },
   },
   eslintPluginPrettierRecommended,
