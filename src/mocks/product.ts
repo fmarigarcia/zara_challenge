@@ -1,3 +1,4 @@
+import { CartProduct } from '@/types/cart';
 import { ListProduct, Product } from '@/types/product';
 
 export const mockProduct: ListProduct = {
@@ -110,4 +111,13 @@ export const mockFullProduct: Product = {
       imageUrl: 'http://prueba-tecnica-api-tienda-moviles.onrender.com/images/OPP-R12FS-amber-orange.png',
     },
   ],
+};
+
+export const cartProductMock: CartProduct = {
+  uuid: '826c768c-bfad-450f-9fc4-c5850e362af1',
+  name: 'Galaxy S24 Ultra',
+  storage: '256 GB',
+  price: 1229,
+  color: 'Titanium Black',
+  imageUrl: 'http://prueba-tecnica-api-tienda-moviles.onrender.com/images/SMG-S24U-titanium-black.png',
 };
