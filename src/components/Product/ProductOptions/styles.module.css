@@ -62,3 +62,16 @@
   background-color: #f3f2f2;
   color: #c2bfbc;
 }
+
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 40px;
+    height: auto;
+  }
+
+  .imageContainer {
+    width: 100%;
+    min-height: 275px;
+  }
+}
