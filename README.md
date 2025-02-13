@@ -91,9 +91,17 @@ Datos mockeados para pruebas y desarrollo local sin depender de la API.
 
 Definiciones de tipos y modelos para productos y el carrito.
 
-### **Testing**
+### **Unit testing**
 
 Las pruebas están en la misma carpeta de los componentes, con el sufijo `.test.tsx`.
+
+### **Storybook (`src/stories/`)**
+
+Se han creado stories de storybook para los diferentes componentes. Para ver la librería de storybook se debe lanzar con:
+
+```bash
+npm run storybook
+```
 
 ## **Despliegue**
 
