@@ -3,8 +3,11 @@ import Link from 'next/link';
 import { routes } from '@/app/routes';
 import Logo from '@/icons/Logo';
 import CartLink from './CartLink';
-import { testIds } from './index.test';
 import styles from './styles.module.css';
+
+export const testIds = {
+  link: 'header-home-link',
+};
 
 const Header: React.FC = () => {
   return (

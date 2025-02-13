@@ -6,11 +6,7 @@ import '@testing-library/jest-dom';
 import { RouterContext } from 'next/dist/shared/lib/router-context.shared-runtime';
 import { NextRouter } from 'next/router';
 import { routes } from '@/app/routes';
-import Header from '.';
-
-export const testIds = {
-  link: 'header-home-link',
-};
+import Header, { testIds } from '.';
 
 describe('Header', () => {
   const router: Partial<NextRouter> = {
