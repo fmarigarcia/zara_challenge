@@ -12,7 +12,7 @@ interface IProductCardProps {
 
 const ProductCard: React.FC<IProductCardProps> = ({ product }) => {
   return (
-    <Link href={`${routes.product}/${product.id}`}>
+    <Link href={`${routes.product}/${product.id}`} prefetch={false}>
       <div className={styles.card}>
         <div className={styles.imgContainer}>
           <Image

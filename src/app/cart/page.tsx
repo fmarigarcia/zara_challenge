@@ -23,7 +23,7 @@ const CartPage: React.FC = () => {
       </div>
       <div className={styles.fixedContainer}>
         <div className={styles.buttonContainer}>
-          <Link href={routes.home} className={clsx(styles.button, styles.continueShopping)}>
+          <Link href={routes.home} className={clsx(styles.button, styles.continueShopping)} prefetch={false}>
             continue shopping
           </Link>
           <div className={styles.leftContainer}>
@@ -31,7 +31,7 @@ const CartPage: React.FC = () => {
               <span>total</span>
               <span>{getTotalFromCart(cartItems)} EUR</span>
             </div>
-            <Link href="#" className={clsx(styles.button, styles.pay)}>
+            <Link href="#" className={clsx(styles.button, styles.pay)} prefetch={false}>
               pay
             </Link>
           </div>

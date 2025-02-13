@@ -1,6 +1,6 @@
 'use client';
 
-import React, { PropsWithChildren, createContext, useCallback, useState } from 'react';
+import React, { PropsWithChildren, createContext, useCallback, useEffect, useState } from 'react';
 import { CartProduct } from '@/types/cart';
 
 export const LOCAL_STORAGE_CART_KEY = 'LOCAL_STORAGE_CART';
@@ -20,7 +20,11 @@ export const CartContext = createContext<CartContextType>({
 const getCart = () => JSON.parse(localStorage.getItem(LOCAL_STORAGE_CART_KEY) ?? '[]') as CartProduct[];
 
 const LocalStorageCartProvider: React.FC<PropsWithChildren> = ({ children }) => {
-  const [cartItems, setCartItems] = useState<CartProduct[]>(getCart());
+  const [cartItems, setCartItems] = useState<CartProduct[]>([]);
+
+  useEffect(() => {
+    setCartItems(getCart());
+  }, []);
 
   const save = useCallback((cart: CartProduct[]) => {
     setCartItems(cart);

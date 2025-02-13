@@ -9,7 +9,7 @@ import styles from './styles.module.css';
 const Header: React.FC = () => {
   return (
     <div className={styles.header}>
-      <Link href={routes.home} data-testid={testIds.link}>
+      <Link href={routes.home} data-testid={testIds.link} prefetch={false}>
         <Logo />
       </Link>
       <CartLink />

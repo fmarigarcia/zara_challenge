@@ -18,7 +18,7 @@ const ProductPage: React.FC<IProductPageProps> = async ({ params }) => {
   const product = await phoneApi.getPhoneById(id);
   return (
     <>
-      <Link href={routes.home} className={styles.backLink}>
+      <Link href={routes.home} className={styles.backLink} prefetch={false}>
         <ArrowLeft />
         <span>BACK</span>
       </Link>

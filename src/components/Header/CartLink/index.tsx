@@ -10,7 +10,7 @@ import styles from './styles.module.css';
 const CartLink: React.FC = () => {
   const { cartItems } = useContext(CartContext);
   return (
-    <Link href={routes.cart} className={styles.cartLink}>
+    <Link href={routes.cart} className={styles.cartLink} prefetch={false}>
       <Bag />
       <span>{cartItems.length}</span>
     </Link>
